@@ -1,0 +1,86 @@
+.\abs -r -n 1000 -c 10 -s 99999999 https://localhost:9443/
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+
+
+Server Software:
+Server Hostname:        localhost
+Server Port:            9443
+TLS Server Name:        localhost
+
+Document Path:          /
+Document Length:        0 bytes
+
+Concurrency Level:      10
+Time taken for tests:   24.107 seconds
+Complete requests:      0
+Failed requests:        10
+   (Connect: 10, Receive: 0, Length: 0, Exceptions: 0)
+Total transferred:      0 bytes
+HTML transferred:       0 bytes
+
+C:\xampp\apache\bin> .\abs -r -n 1000 -c 10 -s 99999999 https://localhost:8443/
+This is ApacheBench, Version 2.3 <$Revision: 1879490 $>
+Copyright 1996 Adam Twiss, Zeus Technology Ltd, http://www.zeustech.net/
+Licensed to The Apache Software Foundation, http://www.apache.org/
+
+Benchmarking localhost (be patient)
+Completed 100 requests
+Completed 200 requests
+Completed 300 requests
+Completed 400 requests
+Completed 500 requests
+SSL handshake failed (5).
+Completed 600 requests
+Completed 700 requests
+SSL handshake failed (5).
+SSL handshake failed (5).
+SSL handshake failed (5).
+Completed 800 requests
+Completed 900 requests
+Completed 1000 requests
+Finished 1000 requests
+
+
+Server Software:        myserver/1.0
+Server Hostname:        localhost
+Server Port:            8443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+Server Temp Key:        X25519 253 bits
+TLS Server Name:        localhost
+
+Document Path:          /
+Document Length:        35 bytes
+
+Concurrency Level:      10
+Time taken for tests:   417.405 seconds
+Complete requests:      1000
+Failed requests:        4
+   (Connect: 0, Receive: 0, Length: 4, Exceptions: 0)
+Total transferred:      146412 bytes
+HTML transferred:       34860 bytes
+Requests per second:    2.40 [#/sec] (mean)
+Time per request:       4174.055 [ms] (mean)
+Time per request:       417.405 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.34 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        0 2469 5545.9   1234   67287
+Processing:     7 1638 8278.6   1040  133505
+Waiting:        4 1068 691.6    978    6668
+Total:         24 4107 9895.8   2435  133505
+
+Percentage of the requests served within a certain time (ms)
+  50%   2435
+  66%   3270
+  75%   3836
+  80%   4295
+  90%   5910
+  95%  10163
+  98%  19388
+  99%  35913
+ 100%  133505 (longest request)

@@ -1,0 +1,38 @@
+Server Software:        myserver/1.0
+Server Hostname:        localhost
+Server Port:            9443
+SSL/TLS Protocol:       TLSv1.2,ECDHE-RSA-AES256-GCM-SHA384,2048,256
+Server Temp Key:        X25519 253 bits
+TLS Server Name:        localhost
+
+Document Path:          /
+Document Length:        35 bytes
+
+Concurrency Level:      10
+Time taken for tests:   254.228 seconds
+Complete requests:      1000
+Failed requests:        0
+Total transferred:      147000 bytes
+HTML transferred:       35000 bytes
+Requests per second:    3.93 [#/sec] (mean)
+Time per request:       2542.276 [ms] (mean)
+Time per request:       254.228 [ms] (mean, across all concurrent requests)
+Transfer rate:          0.56 [Kbytes/sec] received
+
+Connection Times (ms)
+              min  mean[+/-sd] median   max
+Connect:        4 1766 5425.3    582   66631
+Processing:     3  703 466.0    628    2383
+Waiting:        2  677 453.5    606    2319
+Total:         19 2469 5518.3   1463   67597
+
+Percentage of the requests served within a certain time (ms)
+  50%   1463
+  66%   2038
+  75%   2460
+  80%   2797
+  90%   4363
+  95%   7950
+  98%   9496
+  99%  17990
+ 100%  67597 (longest request)
